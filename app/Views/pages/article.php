@@ -10,8 +10,10 @@
                 <h1 class="article-title">Akastra Daily</h1>
                 <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disin</p>
             </div>
+            <hr>
         </div>
         <!--SEARCH BAR-->
+        <br>
         <div class="row justify-content-left">
             <div class="col-lg-6 col-sm-12 mt-2 mb-2">
                 <form class="d-flex search-bar" action="">
@@ -21,7 +23,8 @@
             </div>
         </div>
         <!--ARTICLE-->
-        <div>
+        <br>
+        <div class="row text-justify">
             <div class="card">
                 <p>hello</p>
             </div>
