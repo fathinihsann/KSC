@@ -24,17 +24,25 @@
         </div>
         <!--ARTICLE-->
         <br>
-        <a>
+        <div class="row text-justify">
+            <div class="col-lg-10 col-sm-12">
+            <a>
             <div class="card">
                 <h3 class="mt-3">Ganti Ban Anda apabila Terdapat Salah Satu Kondisi Berikut</h3>
                 <img src="https://asset.indosport.com/article/image/q/80/334992/manchester_city_vs_paris_saint_germain_liga_champions-169.jpg?w=750&h=423" alt="" class="img fake-img mt-3" height="200px">
                 <br>
                 <p></p>
-                <p>Selain</p>
+                <p>
+                    <span style="font-size:18px">
+                        Selain buat menopang bodi
+                    </span>
+                </p>
             </div>
         </a>
-        <div class="row text-justify">
+            </div>
         </div>
+        
+        
     </div>
 </section>
 <?= $this->endSection(); ?>
