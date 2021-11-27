@@ -1,0 +1,134 @@
+.booking-btn {
+  background-color: #594cda;
+  color: white;
+  text-decoration: none;
+  padding: 5px 17px 5px;
+  border: 2px solid #594cda;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.booking-btn:hover {
+  background-color: transparent;
+  color: #594cda;
+  text-decoration: none;
+  padding: 5px 17px 5px;
+  border: 2px solid #594cda;
+  border-radius: 10px;
+}
+
+.whatsapp-icon {
+  height: 90px;
+  width: 90px;
+  position: fixed;
+  bottom: 50px;
+  right: 0px;
+  z-index: 999;
+  background-color: transparent;
+}
+
+.menu-car {
+  background-color: #594cda;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 2.7px 1.9px rgba(0, 0, 0, 0.034),
+    0px 6.3px 4.3px rgba(0, 0, 0, 0.049), 0px 11.3px 7.7px rgba(0, 0, 0, 0.06),
+    0px 18.8px 12.8px rgba(0, 0, 0, 0.07), 0px 31px 21.2px rgba(0, 0, 0, 0.081),
+    0px 54.1px 37px rgba(0, 0, 0, 0.096), 0px 117px 80px rgba(0, 0, 0, 0.13);
+  z-index: 9999;
+  border-radius: 8px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.menu-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-car {
+  border: none;
+  width: fit-content;
+  padding: 10px 20px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .choose-car {
+    border: none;
+    width: 100%;
+    padding: 10px 20px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+
+.submit-btn {
+  border: none;
+  background-color: white;
+  border: 2px solid white;
+  color: #594cda;
+  padding: 10px 20px 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  border: none;
+  border: 2px solid white;
+  background-color: #594cda;
+  color: white;
+  padding: 10px 20px 10px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.row-header {  
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.article-title {
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  margin-bottom: 0px;
+}
+
+.article-subtitle {
+  font-size: small;
+  font-weight: bold;
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
