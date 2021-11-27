@@ -38,10 +38,44 @@
                     </span>
                 </p>
             </div>
-        </a>
+                </a>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h3>Popular Post</h3>
+                    <a>
+                        <img src="https://asset.indosport.com/article/image/q/80/334992/manchester_city_vs_paris_saint_germain_liga_champions-169.jpg?w=750&h=423" alt="" class="popluar mt-3 img-fluid">
+                        <p class="text-center mt-2">
+                            Ganti Ban
+                        </p>
+                    </a>
+                    <br>
+                    <hr>
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/AkastraToyota/" target="_blank">
+                        <p class="mt-1">
+                        <i class="Ini Ini-facebook"></i>Akastra Toyota
+                        </p>
+                    </a>
+                    <a href="https://www.instagram.com/akastra_toyota/" target="_blank">
+                        <p class="mt-1">
+                        <i class="Ini Ini-instagram"></i>Akastra Toyota
+                        </p>
+                    </a>
+                </div>
+
             </div>
         </div>
-        
+        <div class="col d-flex justify-content-center mt-3 mb-4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item active">
+                            <a class="page-link" href="">1</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>    
         
     </div>
 </section>
