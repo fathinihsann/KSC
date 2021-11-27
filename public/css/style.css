@@ -154,3 +154,31 @@
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.img {
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.fakeimg {
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.mt-3, .my-3 {
+  margin-top: 1rem!important;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #121212;
+  margin: 0px;
+}

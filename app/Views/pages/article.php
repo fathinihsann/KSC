@@ -24,10 +24,16 @@
         </div>
         <!--ARTICLE-->
         <br>
-        <div class="row text-justify">
+        <a>
             <div class="card">
-                <p>hello</p>
+                <h3 class="mt-3">Ganti Ban Anda apabila Terdapat Salah Satu Kondisi Berikut</h3>
+                <img src="https://asset.indosport.com/article/image/q/80/334992/manchester_city_vs_paris_saint_germain_liga_champions-169.jpg?w=750&h=423" alt="" class="img fake-img mt-3" height="200px">
+                <br>
+                <p></p>
+                <p>Selain</p>
             </div>
+        </a>
+        <div class="row text-justify">
         </div>
     </div>
 </section>
