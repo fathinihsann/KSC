@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\ArticleModel;
+
 class Pages extends BaseController
 {
+    protected $articleModel;
+
+    public function __construct() {
+        $this->articleModel = new ArticleModel();
+    }
+
     public function index()
     {
         $data = [
@@ -24,10 +32,22 @@ class Pages extends BaseController
 
     public function article()
     {
+
+        $article = $this->articleModel->findAll();
+
         $data = [
-            'active'    => 'article'
+            'active'    => 'article',
+            'article' => $article
         ];
 
+        // $articleModel = new ArticleModel();
+        
+
         return view('pages/article', $data);
+    }
+
+    public function detail($id)
+    {
+        echo $id;
     }
 }

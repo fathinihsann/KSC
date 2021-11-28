@@ -26,18 +26,20 @@
         <br>
         <div class="row text-justify">
             <div class="col-lg-10 col-sm-12">
-            <a>
+            <?php foreach ($article as $a) : ?>
+            <a href="/article/<?= $a['id']; ?>">
             <div class="card">
-                <h3 class="mt-3">Ganti Ban Anda apabila Terdapat Salah Satu Kondisi Berikut</h3>
-                <img src="https://asset.indosport.com/article/image/q/80/334992/manchester_city_vs_paris_saint_germain_liga_champions-169.jpg?w=750&h=423" alt="" class="img fake-img mt-3" height="200px">
+                <h3 class="mt-3"><?= $a['title']; ?></h3>
+                <img src=<?= $a['image']; ?> alt="" class="img fake-img mt-3" height="200px">
                 <br>
-                <p></p>
+                <!-- <p></p> -->
                 <p>
                     <span style="font-size:18px">
-                        Selain buat menopang bodi
+                        <?= $a['content']; ?>
                     </span>
                 </p>
             </div>
+            <?php endforeach; ?>
                 </a>
             </div>
             <div class="rightcolumn">

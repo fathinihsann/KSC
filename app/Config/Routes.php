@@ -35,6 +35,8 @@ $routes->get('/', 'Pages::index');
 $routes->get('/booking', 'Pages::booking');
 $routes->get('/article', 'Pages::article');
 
+$routes->get('/article/(:segment)', 'Pages::detail/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
