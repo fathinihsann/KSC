@@ -95,7 +95,10 @@
                                 <label class="mt-4">Deskripsi</label>
                                 <div class="form-input">
                                     <div class="input-items default">
-                                        <textarea id="editor" name="editor"></textarea>
+                                    <textarea name="editor1"></textarea>
+                                        <script>
+                                            CKEDITOR.replace( 'editor1' );
+                                        </script>
                                     </div>
                                 </div>
                             </form>
