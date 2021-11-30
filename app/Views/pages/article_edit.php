@@ -89,10 +89,10 @@
                             <form class="mb-5" action="" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="" value="">
                                 <div class="form-group mt-3">
-                                    <label>Judul Artikel</label>
+                                    <label class="font-weight-bold" style="color: black;">Judul Artikel</label>
                                     <input type="text" class="form-control" placeholder="Ketikkan Judul ..." name="judul" required>
                                 </div>
-                                <label class="mt-4">Deskripsi</label>
+                                <label class="mt-2 font-weight-bold" style="color: black;">Deskripsi</label>
                                 <div class="form-input">
                                     <div class="input-items default">
                                     <textarea name="editor1"></textarea>
@@ -101,6 +101,17 @@
                                         </script>
                                     </div>
                                 </div>
+                                <div class="custom-file mt-3">
+                                    <input type="file" class="custom-file-input" name="image" id="gambar" onchange="" role="">
+                                    <label class="custom-file-label" for="validatedCustomFile">Choose File ...</label>
+                                    <!-- <div class="invalid-feedback">Example Invalid custom file feedback</div> -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 mt-3">
+                                        <img src="https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png" class="img-thumbnail img-preview" alt="">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-4 submit-btn">Submit</button>
                             </form>
                         </div>
                     </div>
