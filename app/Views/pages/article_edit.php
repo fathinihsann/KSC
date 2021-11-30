@@ -95,7 +95,7 @@
                                 <label class="mt-4">Deskripsi</label>
                                 <div class="form-input">
                                     <div class="input-items default">
-                                        <textarea name="deskripsi" placeholder="Ketikkan Deskripsi" style="visibility: hidden; display: none;"></textarea>
+                                        <textarea id="editor" name="editor"></textarea>
                                     </div>
                                 </div>
                             </form>

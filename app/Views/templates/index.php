@@ -29,6 +29,7 @@
     <link href="/template-styling/css/swiper.css" rel="stylesheet">
     <link href="/template-styling/css/magnific-popup.css" rel="stylesheet">
     <link href="/template-styling/css/styles.css" rel="stylesheet">
+    <script src="<?=base_url('node_modules/ckeditor4/ckeditor.js');?>"></script>
 
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
