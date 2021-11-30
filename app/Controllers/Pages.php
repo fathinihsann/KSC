@@ -33,11 +33,11 @@ class Pages extends BaseController
     public function article()
     {
 
-        $article = $this->articleModel->findAll();
+        // $article = $this->articleModel->findAll();
 
         $data = [
             'active'    => 'article',
-            'article' => $article
+            'article' => $this->articleModel->getArticle()
         ];
 
         // $articleModel = new ArticleModel();
@@ -48,6 +48,23 @@ class Pages extends BaseController
 
     public function detail($id)
     {
-        echo $id;
+        // $article = $this->articleModel->getArticle($id);
+        
+        $data = [
+            'active'    => 'article',
+            'article' => $this->articleModel->getArticle($id)
+        ];
+
+        return view('pages/detail', $data);
+    }
+
+    public function article_edit()
+    {
+        $data = [
+            'active' => 'article',
+            'article' => $this->articleModel->getArticle()
+        ];
+
+        return view('pages/article_edit', $data);
     }
 }

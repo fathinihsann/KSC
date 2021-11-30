@@ -8,7 +8,7 @@
         <div class="row-header">
             <div class="col">
                 <h1 class="article-title">Akastra Daily</h1>
-                <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disini</p>
+                <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disin</p>
             </div>
             <hr>
         </div>
@@ -42,7 +42,7 @@
             <?php endforeach; ?>
                 </a>
             </div>
-            <div class="rightcolumn">
+            <!-- <div class="rightcolumn">
                 <div class="card">
                     <h3>Popular Post</h3>
                     <a>
@@ -66,7 +66,7 @@
                     </a>
                 </div>
 
-            </div>
+            </div> -->
         </div>
         <div class="col d-flex justify-content-center mt-3 mb-4">
                 <nav aria-label="Page navigation">
@@ -76,9 +76,34 @@
                         </li>
                     </ul>
                 </nav>
-
             </div>    
-        
+
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h2>Tambahkan Artikel</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <form class="mb-5" action="" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="" value="">
+                                <div class="form-group mt-3">
+                                    <label>Judul Artikel</label>
+                                    <input type="text" class="form-control" placeholder="Ketikkan Judul ..." name="judul" required>
+                                </div>
+                                <label class="mt-4">Deskripsi</label>
+                                <div class="form-input">
+                                    <div class="input-items default">
+                                        <textarea name="deskripsi" placeholder="Ketikkan Deskripsi" style="visibility: hidden; display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <?= $this->endSection(); ?>
