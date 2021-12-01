@@ -190,6 +190,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 3px #dadada;
 }
 
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
 p {
   font-size: 16px;
   font-weight: 400;

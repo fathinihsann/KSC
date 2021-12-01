@@ -39,6 +39,9 @@
                         <?= $a['content']; ?>
                     </span>
                 </p>
+                <div class="card-body">
+                    <a href="" class="btn btn-danger mt-3 float-right text-decoration-none"><i class="lni lni-trash"></i>Hapus</a>
+                </div>
             </div>
             <?php endforeach; ?>
                 </a>
@@ -79,7 +82,6 @@
                     </ul>
                 </nav>
             </div>    
-
         <br>
         <br>
         <div class="row">
@@ -88,33 +90,55 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <form class="mb-5" action="" method="POST" enctype="multipart/form-data">
-                                <input type="hidden" name="" value="">
+                            <form class="mb-5" action="/pages/save" method="POST" enctype="multipart/form-data">
+                                <!-- <input type="hidden" name="" value=""> -->
                                 <div class="form-group mt-3">
-                                    <label class="font-weight-bold" style="color: black;">Judul Artikel</label>
-                                    <input type="text" class="form-control" placeholder="Ketikkan Judul ..." name="judul" required>
+                                    <label for="title" class="font-weight-bold" style="color: black;">Judul Artikel</label>
+                                    <input type="text" class="form-control" placeholder="Ketikkan Judul ..." id="title" name="title" required>
                                 </div>
                                 <label class="mt-2 font-weight-bold" style="color: black;">Deskripsi</label>
                                 <div class="form-input">
-                                    <div class="input-items default">
-                                    <textarea name="editor1"></textarea>
+                                    <textarea id="content" name="content"></textarea>
                                         <script>
-                                            CKEDITOR.replace( 'editor1' );
+                                            CKEDITOR.replace( 'content' );
                                         </script>
-                                    </div>
                                 </div>
                                 <div class="custom-file mt-3">
-                                    <input type="file" class="custom-file-input" name="image" id="gambar" onchange="" role="">
+                                    <input type="file" class="custom-file-input" name="image" id="image-source" onchange="imagePreview(this);" role="">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose File ...</label>
                                     <!-- <div class="invalid-feedback">Example Invalid custom file feedback</div> -->
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-4 mt-3">
-                                        <img src="https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png" class="img-thumbnail img-preview" alt="">
+                                        <img src="https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png" id="image-preview" class="img-thumbnail img-preview" alt="your image">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary mt-4 submit-btn">Submit</button>
                             </form>
+                            <script>
+                                    // function previewImage() {
+                                    //     document.getElementById("image-preview").style.display = "block";
+                                    //     var oFReader = new FileReader();
+                                    //     oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+                                    
+                                    //     oFReader.onload = function(oFREvent) {
+                                    //     document.getElementById("image-preview").src = oFREvent.target.result;
+                                    //     };
+                                    // };
+
+                                    function imagePreview(input) {
+                                        if (input.files && input.files[0]) {
+                                            var reader = new FileReader();
+
+                                            reader.onload = function (e) {
+                                                $('#image-preview')
+                                                    .attr('src', e.target.result);
+                                            };
+
+                                            reader.readAsDataURL(input.files[0]);
+                                        }
+                                    };
+                                </script>
                         </div>
                     </div>
                 </div>

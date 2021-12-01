@@ -67,4 +67,8 @@ class Pages extends BaseController
 
         return view('pages/article_edit', $data);
     }
+
+    public function save() {
+        dd($this->request->getVar());
+    }
 }
