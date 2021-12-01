@@ -42,7 +42,7 @@
             <?php endforeach; ?>
                 </a>
             </div>
-            <div class="rightcolumn">
+            <div class="leftcolumn">
                 <div class="card">
                     <h3>Popular Post</h3>
                     <a>
@@ -72,7 +72,7 @@
                 <nav aria-label="Page navigation">
                     <ul class="pagination">
                         <li class="page-item active">
-                            <a class="page-link" href="">1</a>
+                            <a class="page-link text-decoration-none" href="">1</a>
                         </li>
                     </ul>
                 </nav>
