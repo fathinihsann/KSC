@@ -42,7 +42,7 @@
             <?php endforeach; ?>
                 </a>
             </div>
-            <div class="leftcolumn">
+            <div class="right">
                 <div class="card">
                     <h3>Popular Post</h3>
                     <a>
