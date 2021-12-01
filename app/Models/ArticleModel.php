@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ArticleModel extends Model
 {
     protected $table = 'article';
-
+    
     public function getArticle($id = false) {
         if($id == false) {
             return $this->findAll();
@@ -15,4 +15,9 @@ class ArticleModel extends Model
 
         return $this->where(['id' => $id])->first();
     }
+
+    // public function getSocmed($id)
+    // {
+
+    // }
 }

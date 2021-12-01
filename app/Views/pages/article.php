@@ -54,12 +54,12 @@
                     <br>
                     <hr>
                     <h3>Follow Us</h3>
-                    <a href="https://www.facebook.com/AkastraToyota/" target="_blank">
+                    <a class="text-decoration-none" href="https://www.facebook.com/AkastraToyota/" target="_blank">
                         <p class="mt-1">
                         <i class="Ini Ini-facebook"></i>Akastra Toyota
                         </p>
                     </a>
-                    <a href="https://www.instagram.com/akastra_toyota/" target="_blank">
+                    <a class="text-decoration-none" href="https://www.instagram.com/akastra_toyota/" target="_blank">
                         <p class="mt-1">
                         <i class="Ini Ini-instagram"></i>Akastra Toyota
                         </p>
