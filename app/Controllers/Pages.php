@@ -37,7 +37,8 @@ class Pages extends BaseController
 
         $data = [
             'active'    => 'article',
-            'article' => $this->articleModel->getArticle()
+            'article' => $this->articleModel->paginate(5),
+            'pager' => $this->articleModel->pager
         ];
 
         // $articleModel = new ArticleModel();
@@ -66,7 +67,8 @@ class Pages extends BaseController
     {
         $data = [
             'active' => 'article',
-            'article' => $this->articleModel->getArticle()
+            'article' => $this->articleModel->paginate(5, 'article'),
+            'pager' => $this->articleModel->pager
         ];
 
         return view('pages/article_edit', $data);

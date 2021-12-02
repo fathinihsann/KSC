@@ -77,13 +77,9 @@
             </div>
         </div>
         <div class="col d-flex justify-content-center mt-3 mb-4">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li class="page-item active">
-                            <a class="page-link text-decoration-none" href="">1</a>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="col d-flex justify-content-center mt-3 mb-4">
+            <?= $pager->links('article', 'pagination'); ?>
+        </div>  
             </div>    
         <br>
         <br>
