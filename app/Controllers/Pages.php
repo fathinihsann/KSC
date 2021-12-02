@@ -55,6 +55,10 @@ class Pages extends BaseController
             'article' => $this->articleModel->getArticle($id)
         ];
 
+        if(empty($data['article'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Article'.'Tidak Ditemukan.');
+        }
+
         return view('pages/detail', $data);
     }
 
@@ -69,6 +73,13 @@ class Pages extends BaseController
     }
 
     public function save() {
-        dd($this->request->getVar());
+        // dd($this->request->getVar());
+        $this->articleModel->save([
+            'title' => $this->request->getVar('title'),
+            'content' => $this->request->getVar('content'),
+            // 'image' => $this->request->getVar('image')
+        ]);
+
+        return redirect()->to('/article');
     }
 }
