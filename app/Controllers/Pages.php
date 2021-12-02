@@ -32,13 +32,24 @@ class Pages extends BaseController
 
     public function article()
     {
+        // $currentPage = $this->request->getVar('page_article') ? $this->request->getVar('page_article') : 1;
 
         // $article = $this->articleModel->findAll();
 
+        // d($this->request->getVar('keyword'));
+
+        $keyword = $this->request->getVar('keyword');
+        if($keyword){
+            $article = $this->articleModel->search($keyword);
+        } else {
+            $article  = $this->articleModel;
+        }
+
         $data = [
             'active'    => 'article',
-            'article' => $this->articleModel->paginate(5),
+            'article' => $article->paginate(5, 'article'),
             'pager' => $this->articleModel->pager
+            // 'currentPage' => $currentPage
         ];
 
         // $articleModel = new ArticleModel();
@@ -65,6 +76,9 @@ class Pages extends BaseController
 
     public function article_edit()
     {
+
+        d($this->request->getVar('keyword'));
+
         $data = [
             'active' => 'article',
             'article' => $this->articleModel->paginate(5, 'article'),

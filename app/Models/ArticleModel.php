@@ -21,4 +21,12 @@ class ArticleModel extends Model
     // {
 
     // }
+    public function search($keyword)
+    {
+        // $builder = $this->table('article');
+        // $builder->like('title', $keyword);
+        // return $builder;
+
+        return $this->table('article')->like('title', $keyword);
+    }
 }
