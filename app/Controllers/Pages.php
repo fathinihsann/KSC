@@ -74,10 +74,16 @@ class Pages extends BaseController
 
     public function save() {
         // dd($this->request->getVar());
+        $fileImage = $this->request->getFile('image');
+
+        $imageName = $fileImage->getRandomName();
+
+        $fileImage->move('img', $imageName);
+
         $this->articleModel->save([
             'title' => $this->request->getVar('title'),
             'content' => $this->request->getVar('content'),
-            // 'image' => $this->request->getVar('image')
+            'image' => $imageName
         ]);
 
         session()->setFlashdata('pesan', 'Article berhasil ditambahkan');

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ArticleModel extends Model
 {
     protected $table = 'article';
-    protected $allowedFields = ['title', 'content'];
+    protected $allowedFields = ['title', 'content', 'image'];
     
     public function getArticle($title = false) {
         if($title == false) {

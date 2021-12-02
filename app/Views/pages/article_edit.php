@@ -107,7 +107,7 @@
                                         </script>
                                 </div>
                                 <div class="custom-file mt-3">
-                                    <input type="file" class="custom-file-input" name="image" id="image-source" onchange="imagePreview(this);" role="">
+                                    <input type="file" class="custom-file-input" name="image" id="image" onchange="imagePreview(this);" role="">
                                     <label class="custom-file-label" for="validatedCustomFile">Choose File ...</label>
                                     <!-- <div class="invalid-feedback">Example Invalid custom file feedback</div> -->
                                 </div>
@@ -119,16 +119,6 @@
                                 <button type="submit" class="btn btn-primary mt-4 submit-btn">Submit</button>
                             </form>
                             <script>
-                                    // function previewImage() {
-                                    //     document.getElementById("image-preview").style.display = "block";
-                                    //     var oFReader = new FileReader();
-                                    //     oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
-                                    
-                                    //     oFReader.onload = function(oFREvent) {
-                                    //     document.getElementById("image-preview").src = oFREvent.target.result;
-                                    //     };
-                                    // };
-
                                     function imagePreview(input) {
                                         if (input.files && input.files[0]) {
                                             var reader = new FileReader();
