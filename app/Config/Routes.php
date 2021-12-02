@@ -35,7 +35,8 @@ $routes->get('/', 'Pages::index');
 $routes->get('/booking', 'Pages::booking');
 $routes->get('/article', 'Pages::article');
 
-$routes->get('/article/(:segment)', 'Pages::detail/$1');
+$routes->delete('/article/(:num)', 'Pages::delete/$1');
+$routes->get('/article/(:any)', 'Pages::detail/$1');
 
 /*
  * --------------------------------------------------------------------

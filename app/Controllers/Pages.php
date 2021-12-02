@@ -46,13 +46,13 @@ class Pages extends BaseController
         return view('pages/article', $data);
     }
 
-    public function detail($id)
+    public function detail($title)
     {
         // $article = $this->articleModel->getArticle($id);
         
         $data = [
             'active'    => 'article',
-            'article' => $this->articleModel->getArticle($id)
+            'article' => $this->articleModel->getArticle($title)
         ];
 
         if(empty($data['article'])) {
@@ -79,6 +79,15 @@ class Pages extends BaseController
             'content' => $this->request->getVar('content'),
             // 'image' => $this->request->getVar('image')
         ]);
+
+        session()->setFlashdata('pesan', 'Article berhasil ditambahkan');
+
+        return redirect()->to('/article');
+    }
+
+    public function delete($id)
+    {
+        $this->articleModel->delete($id);
 
         return redirect()->to('/article');
     }

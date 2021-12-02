@@ -6,6 +6,12 @@
         <br>
         <!-- HEADER -->
         <div class="row-header">
+            <?php if(session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                </div>
+            <?php endif; ?>
+
             <div class="col">
                 <h1 class="article-title">Akastra Daily</h1>
                 <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disini</p>
@@ -27,7 +33,7 @@
         <div class="row text-justify">
             <div class="col-lg-10 col-sm-12">
             <?php foreach ($article as $a) : ?>
-            <a class="text-decoration-none" href="/article/<?= $a['id']; ?>">
+            <a class="text-decoration-none" href="/article/<?= $a['title']; ?>">
             <div class="card">
                 <h3 class="mt-3"><?= $a['title']; ?></h3>
                 <img src=<?= $a['image']; ?> alt="" class="img fake-img mt-3" height="200px">

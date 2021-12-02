@@ -28,7 +28,7 @@
             <div class="leftcolumn">
             <div class="col-lg-10 col-sm-12">
             <?php foreach ($article as $a) : ?>
-            <a class="text-decoration-none" href="/article/<?= $a['id']; ?>">
+            <a class="text-decoration-none" href="/article/<?= $a['title']; ?>">
             <div class="card">
                 <h3 class="mt-3"><?= $a['title']; ?></h3>
                 <img src=<?= $a['image']; ?> alt="" class="img fake-img mt-3" height="200px">
@@ -40,7 +40,10 @@
                     </span>
                 </p>
                 <div class="card-body">
-                    <a href="" class="btn btn-danger mt-3 float-right text-decoration-none"><i class="lni lni-trash"></i>Hapus</a>
+                    <form action="/article/<?= $a['id'];?>" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger mt-3 float-right">Hapus</button>
+                    </form>
                 </div>
             </div>
             <?php endforeach; ?>
