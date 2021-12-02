@@ -77,11 +77,16 @@ class Pages extends BaseController
     public function article_edit()
     {
 
-        d($this->request->getVar('keyword'));
+        $keyword = $this->request->getVar('keyword');
+        if($keyword){
+            $article = $this->articleModel->search($keyword);
+        } else {
+            $article = $this->articleModel;
+        }
 
         $data = [
             'active' => 'article',
-            'article' => $this->articleModel->paginate(5, 'article'),
+            'article' => $article->paginate(5, 'article'),
             'pager' => $this->articleModel->pager
         ];
 

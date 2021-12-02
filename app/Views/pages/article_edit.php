@@ -16,8 +16,8 @@
         <br>
         <div class="row justify-content-left">
             <div class="col-lg-6 col-sm-12 mt-2 mb-2">
-                <form class="d-flex search-bar" action="" method="GET">
-                    <input class="form-control me-2 search" type="search" placeholder="Cari Artikel ..." name="keyword">
+                <form class="d-flex search-bar" action="" method="POST">
+                    <input class="form-control me-2 search" type="text" placeholder="Cari Artikel ..." name="keyword">
                     <button class="ml-3 btn btn-outline-success" type="submit" name="submit">Search</button>
                 </form>
             </div>
