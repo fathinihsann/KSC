@@ -378,12 +378,6 @@ a:not([href]):not([tabindex]) {
   padding: 100px;
 }
 
-img {
-  height: 50px;
-  width: 150px;
-  object-fit: contain;
-}
-
 .contact-wrapper .contact-title {
   font-size: 32px;
   font-weight: 700;
@@ -489,3 +483,15 @@ textarea {
   position: relative;
   text-transform: uppercase;
 }
+
+.icon-servis {
+  height: 50px;
+  width: 150px;
+  object-fit: contain;
+}
+
+/* img {
+  height: 50px;
+  width: 150px;
+  object-fit: contain;
+} */
