@@ -58,6 +58,15 @@ class Pages extends BaseController
         return view('pages/article', $data);
     }
 
+    public function layanan()
+    {
+        $data = [
+            'active' => 'layanan',
+        ];
+
+        return view('pages/layanan', $data);
+    }
+
     public function detail($title)
     {
         // $article = $this->articleModel->getArticle($id);

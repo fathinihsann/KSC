@@ -6,7 +6,7 @@
          <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Pavo</a> -->
 
          <!-- Image Logo -->
-         <a class="navbar-brand logo-image" href="index.html"><img src="/template-styling/images/logo.svg" alt="alternative"></a>
+         <a class="navbar-brand logo-image" href="/"><img src="/template-styling/images/logo.svg" alt="alternative"></a>
 
          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
              <span class="navbar-toggler-icon"></span>
@@ -28,15 +28,15 @@
                      " href="/">Home <span class="sr-only">(current)</span></a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link
+                     <a class="nav-link"
                      <?php if ($active == "layanan") {
                             echo "active";
                         }; ?>
-                     ">Layanan</a>
+                     href="/layanan">Layanan</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link"
-                     <?php if ($active == "layanan") {
+                     <?php if ($active == "article") {
                             echo "active";
                         }; ?>
                      href="/article">Article</a>

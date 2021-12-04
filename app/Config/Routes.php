@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Pages::index');
 $routes->get('/booking', 'Pages::booking');
 $routes->get('/article', 'Pages::article');
+$routes->get('/layanan', 'Pages::layanan');
 
 $routes->delete('/article/(:num)', 'Pages::delete/$1');
 $routes->get('/article/(:any)', 'Pages::detail/$1');

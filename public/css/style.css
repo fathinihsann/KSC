@@ -347,3 +347,104 @@ label {
   display: inline-block;
   margin-bottom: .5rem;
 }
+
+.features-area {
+  background-color: #f4f6f7;
+  padding-top: 120px;
+  padding-bottom: 130px;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.servis {
+  border-width: 0px;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%), 0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
+  border-radius: 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.call {
+  background-image: url("https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+  padding: 100px;
+}
+
+img {
+  height: 50px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.contact-wrapper .contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+.section-title .title {
+  font-size: 44px;
+  font-weight: 600;
+  color: #121212;
+  line-height: 55px;
+}
+
+i, span, a {
+  display: inline-block;
+}
+
+.col-md-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.form-input .input-items {
+  position: relative;
+}
+
+.form-style-two .form-input .input-items input, .form-style-two .form-input .input-items textarea {
+  border-radius: 5px;
+  padding-left: 12px;
+  padding-right: 44px;
+}
+
+.form-input .input-items.default input, .form-input .input-items.default textarea {
+  border-color: #a4a4a4;
+  color: #6c6c6c;
+}
+
+.form-input .input-items input, .form-input .input-items textarea {
+  width: 100%;
+  height: 44px;
+  border: 2px solid;
+  padding-left: 44px;
+  padding-right: 12px;
+  position: relative;
+  font-size: 16px;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.contact-area {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  background-color: #f4f6f7;
+}
