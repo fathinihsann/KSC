@@ -3,13 +3,22 @@
 namespace App\Controllers;
 
 use App\Models\ArticleModel;
+use App\Models\BodyPaintModel;
+use App\Models\GeneralRepairModel;
+use App\Models\PesanModel;
 
 class Pages extends BaseController
 {
     protected $articleModel;
+    protected $generalrepairModel;
+    protected $bodypaintModel;
+    protected $pesanModel;
 
     public function __construct() {
         $this->articleModel = new ArticleModel();
+        $this->generalrepairModel = new GeneralRepairModel();
+        $this->bodypaintModel = new BodyPaintModel();
+        $this->pesanModel = new PesanModel();
     }
 
     public function index()
@@ -60,8 +69,13 @@ class Pages extends BaseController
 
     public function layanan()
     {
+        $generalrepair = $this->generalrepairModel->findAll();
+        $bodypaint = $this->bodypaintModel->findAll();
+
         $data = [
             'active' => 'layanan',
+            'generalrepair' =>$generalrepair,
+            'bodypaint' => $bodypaint
         ];
 
         return view('pages/layanan', $data);
@@ -121,10 +135,25 @@ class Pages extends BaseController
         return redirect()->to('/article');
     }
 
+    public function savePesan() {
+        
+        $this->pesanModel->save([
+            'name' => $this->request->getVar('name'),
+            'email' => $this->request->getVar('email'),
+            'message' => $this->request->getVar('message')
+    
+        ]);
+
+        session()->setFlashdata('pesan', 'Feedback berhasil ditambahkan');
+
+        return redirect()->to('/layanan');
+    }
+
     public function delete($id)
     {
         $this->articleModel->delete($id);
 
         return redirect()->to('/article');
     }
+    
 }

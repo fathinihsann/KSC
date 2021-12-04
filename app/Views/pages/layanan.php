@@ -9,161 +9,60 @@
 <br>
 <section id="services" class="feature-area">
     <div class="container">
+    <?php if(session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                </div>
+            <?php endif; ?>
         <div class="row">
             <div class="col text-center">
-                <h1 class="title title-section mb-2">GENERAL REPAIR</h1>
+                <h1 class="title title-section mb-2 font-weight-bold" style="font-size: 48px;">GENERAL REPAIR</h1>
             </div>
         </div>
         <div class="row">
+        <?php foreach($generalrepair as $g) : ?>
             <div class="col-lg-6 col-sm-12 mt-4">
                 <div class="card text-white servis">
                     <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
+                        <img class="icon-servis ml-4 mt-4 mb-3" src="<?= $g['image']; ?>" alt="">
                         <div class="card-body">
-                            <h4 class="card-title">EXPRESS MAINTENANCE</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
+                            <h4 class="card-title"><?= $g['name']; ?></h4>
+                            <p class="card-text mb-3"><?= $g['description']; ?></p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">EXPRESS ROAD ASSISTANCE</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">CLAIM FREE SERVICE</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">SPOORING $ BALACING</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-            <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">AC REPAIRS</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-            </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-            <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">TOYOTA TYRE SOLUTION</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-        </div>
-        </div>
+            <?php endforeach ?>
     </div>
 </section>
 
 <br>
+<br>
 <hr>
+<br>
 <br>
 
 <section id="services" class="feature-area">
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h1 class="title title-section mb-2">BODY & PAINT</h1>
+                <h1 class="title title-section mb-2 font-weight-bold" style="font-size: 48px;">BODY & PAINT</h1>
             </div>
         </div>
         <div class="row">
+        <?php foreach($bodypaint as $b) : ?>
             <div class="col-lg-6 col-sm-12 mt-4">
                 <div class="card text-white servis">
                     <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
+                        <img class="icon-servis ml-4 mt-4 mb-3" src="<?= $b['image']; ?>" alt="">
                         <div class="card-body">
-                            <h4 class="card-title">HIGH </h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
+                            <h4 class="card-title"><?= $b['name']; ?></h4>
+                            <p class="card-text mb-3"><?= $b['description']; ?></p>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">EXPRESS ROAD ASSISTANCE</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">CLAIM FREE SERVICE</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-                <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">SPOORING $ BALACING</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-            <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">AC REPAIRS</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-            </div>
-            </div>
-            <div class="col-lg-6 col-sm-12 mt-4">
-            <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
-                        <img class="icon-servis ml-4 mt-4 mb-3" src="https://www.kindpng.com/picc/m/750-7505601_services-icon-png-services-icon-transparent-png.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">TOYOTA TYRE SOLUTION</h4>
-                            <p class="card-text mb-3">Servis Berkala dalam waktu satu jam, dari mobil masuk sampai mobil keluar</p>
-                        </div>
-                    </a>
-                </div>
-        </div>
-        </div>
+            <?php endforeach ?>
     </div>
 </section>
 
@@ -226,38 +125,59 @@
             </div>
         </div>
     </div>
-    <!-- <div class="row">
+    <div class="row">
         <div class="col-lg-12">
-            <div class="contact-wrapper from-style-two pt-115">
-                <h4 class="contac-title pb-10">
+            <div class="contact-wrapper form-style-two pt-115">
+                <h4 class="contact-title pb-10">
+                    <br>
+                    <br>
+                    <br>
                     <i class="lni lni-envelope"></i>
-                    Tinggalkan <span class="font-weight-normal">Pesan.</span>
+                    Tinggalkan <span>Pesan.</span>
+                    <br>
+                    <br>
                 </h4>
-                <form action="" method="">
+                <form action="/pages/savePesan" method="POST">
                     <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-input mt-25">
-                            <label for="">Name</label>
-                            <div class="input-items default">
-                                <input type="text" name="name" id="name" placeholder="Name..">
-                                <i class="lni -lni-user"></i>
+                        <div class="col-md-6">
+                            <div class="form-input mt-25">
+                                <label for="">Name</label>
+                                <div class="input-items default">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                    <i class="lni lni-user"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-input mt-25">
-                            <label for="">Email</label>
-                            <div class="input-items default">
-                                <input type="text" name="email" id="email" placeholder="Name..">
-                                <i class="lni -lni-user"></i>
+                        <div class="col-md-6">
+                            <div class="form-input mt-25">
+                                <label for="">Email</label>
+                                <div class="input-items default">
+                                    <input type="text" name="email" id="email" placeholder="Email">
+                                    <i class="lni lni-user"></i>
+                                </div>
+                            </div>
+                            <input type="hidden" name="active" value="Layanan">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-input mt-25">
+                                <label for="">Message</label>
+                                <div class="input-items default">
+                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                    <i class="lni lni-pencil-art"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="form-message"></p>
+                        <div class="col-md-12">
+                            <div class="form-input light-rounded-buttons mt-30">
+                                <button type="submit" class="main-btn light-rounded-two">Send Message</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
 </section>
 
