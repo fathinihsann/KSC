@@ -44,7 +44,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe width="465" height="300" src="<?= $g['ytb']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="465" height="400" src="<?= $g['ytb']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
