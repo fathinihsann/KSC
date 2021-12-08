@@ -23,7 +23,7 @@
         <?php foreach($generalrepair as $g) : ?>
             <div class="col-lg-6 col-sm-12 mt-4">
                 <div class="card text-white servis">
-                    <a class="text-decoration-none" href="">
+                    <a class="text-decoration-none" type="button" data-toggle="modal" data-target="#exampleModal">
                         <img class="icon-servis ml-4 mt-4 mb-3" src="<?= $g['image']; ?>" alt="">
                         <div class="card-body">
                             <h4 class="card-title"><?= $g['name']; ?></h4>
@@ -32,6 +32,23 @@
                     </a>
                 </div>
             </div>
+            <?php endforeach ?>
+            <?php foreach($generalrepair as $g) : ?>
+                <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><?= $g['name']; ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe width="465" height="300" src="<?= $g['ytb']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
             <?php endforeach ?>
     </div>
 </section>
