@@ -6,7 +6,7 @@
         <br>
         <!-- HEADER -->
         <div class="row-header">
-            <?php if(session()->getFlashdata('pesan')) : ?>
+            <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>
                 </div>
@@ -14,7 +14,7 @@
 
             <div class="col">
                 <h1 class="article-title">Akastra Daily</h1>
-                <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disini</p>
+                <p class="article-subtitle">Temukan Tips dan Trik Merawat Kendaraan disini!</p>
             </div>
             <hr>
         </div>
@@ -32,21 +32,21 @@
         <br>
         <div class="row text-justify">
             <div class="col-lg-10 col-sm-12">
-            <?php foreach ($article as $a) : ?>
-            <a class="text-decoration-none" href="/article/<?= $a['title']; ?>">
-            <div class="card">
-                <h3 class="mt-3"><?= $a['title']; ?></h3>
-                <img src=<?= $a['image']; ?> alt="" class="img fake-img mt-3" height="200px">
-                <br>
-                <!-- <p></p> -->
-                <p>
-                    <span style="font-size:18px">
-                        <?= $a['content']; ?>
-                    </span>
-                </p>
-            </div>
-            <?php endforeach; ?>
-                </a>
+                <?php foreach ($article as $a) : ?>
+                    <a class="text-decoration-none" href="/article/<?= $a['title']; ?>">
+                        <div class="card">
+                            <h3 class="mt-3"><?= $a['title']; ?></h3>
+                            <img src=<?= $a['image']; ?> alt="" class="img fake-img mt-3" height="200px">
+                            <br>
+                            <!-- <p></p> -->
+                            <p>
+                                <span style="font-size:18px">
+                                    <?= $a['content']; ?>
+                                </span>
+                            </p>
+                        </div>
+                    <?php endforeach; ?>
+                    </a>
             </div>
             <div class="right">
                 <div class="card">
@@ -62,12 +62,12 @@
                     <h3>Follow Us</h3>
                     <a class="text-decoration-none" href="https://www.facebook.com/AkastraToyota/" target="_blank">
                         <p class="mt-1">
-                        <i class="Ini Ini-facebook"></i>Akastra Toyota
+                            <i class="Ini Ini-facebook"></i>Akastra Toyota
                         </p>
                     </a>
                     <a class="text-decoration-none" href="https://www.instagram.com/akastra_toyota/" target="_blank">
                         <p class="mt-1">
-                        <i class="Ini Ini-instagram"></i>Akastra Toyota
+                            <i class="Ini Ini-instagram"></i>Akastra Toyota
                         </p>
                     </a>
                 </div>
@@ -76,7 +76,7 @@
         </div>
         <div class="col d-flex justify-content-center mt-3 mb-4">
             <?= $pager->links('article', 'pagination'); ?>
-        </div>    
+        </div>
     </div>
 </section>
 <?= $this->endSection(); ?>
