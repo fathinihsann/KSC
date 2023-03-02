@@ -56,7 +56,7 @@
                     <a>
                         <img src="https://asset.indosport.com/article/image/q/80/334992/manchester_city_vs_paris_saint_germain_liga_champions-169.jpg?w=750&h=423" alt="" class="popluar mt-3 img-fluid">
                         <p class="text-center mt-2">
-                            Ganti Ba
+                            Ganti B
                         </p>
                     </a>
                     <br>
